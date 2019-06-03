@@ -19,7 +19,7 @@ def build_sequence(input_layer,output_layer,hidden_layer,dropout):
 def choice_model(modl):
     #Three models
     if modl=='alexnet':
-        return models.alexnet(pretrained=True), 9216,'resnet152'
+        return models.alexnet(pretrained=True), 9216,'alexnet'
     elif modl=='densenet169':
         return models.densenet169(pretrained=True),1664,'densenet169'
     else:
