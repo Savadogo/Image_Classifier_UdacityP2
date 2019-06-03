@@ -3,8 +3,8 @@ from model_func import *
 from torch import optim,nn
 import argparse
 parser=argparse.ArgumentParser(description='Training hyperparameters and options')
-parser.add_argument('checkpoint',type=str,help='name of checkpoint to save')
-parser.add_argument('--data_directory',type=str,default='flowers',help='images directory (default: flowers)')
+parser.add_argument('--checkpoint',type=str,default='checkpoint',type=str,help='name of checkpoint to save (default: checkpoint)')
+parser.add_argument('data_directory',help='images directory')
 parser.add_argument('--model',type=str,default="vgg16",help='choose model between vgg16,densenet169 or alexnet (default: vgg16)')
 parser.add_argument('--output_layer',type=int,default=102,help='number of output categories')
 parser.add_argument('--hidden_layer',type=int,default=[1000],nargs='*',help='output size of hidden layers (default: [1000]). Could be for instance 1000 525')
